@@ -11,9 +11,31 @@ return arr
 
 
 function whileLoop(n) {
-	const n = Math.floor(Math.random() * 10)
 	while (n > 0) {
 	console.log(--n)
 }
 return 'done'
+}
+
+
+function doWhileLoop(arr) {
+	do {
+	  arr.shift()
+	} while (arr.length > 0 && maybeTrue());
+return arr
+
+	function maybeTrue() {
+	  return Math.random() >= 0.5
+	}
+}
+
+
+function doWhileLoop(arr) {
+	function maybeTrue() {
+	  return Math.random() >= 0.5
+	}
+	do {
+	  arr.shift()
+	} while (arr.length > 0 && maybeTrue());
+return arr
 }
